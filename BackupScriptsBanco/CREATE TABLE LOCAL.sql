@@ -1,0 +1,22 @@
+USE [BDInventarioOtacom]
+GO
+
+/****** Object:  Table [dbo].[Local]    Script Date: 25/10/2019 16:20:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Local](
+	[ID] [bigint] IDENTITY(1,1) NOT NULL,
+	[Descricao] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Local] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
