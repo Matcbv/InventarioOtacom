@@ -27,3 +27,5 @@ C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.
 C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\waInventario.dll
 C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\waInventario.pdb
 C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\waInventario.csproj.CopyComplete
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Local\Index.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Local\Create.g.cshtml.cs

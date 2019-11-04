@@ -1,14 +1,19 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using waInventario.DAO.Local;
+using waInventario.Models.Local.Input;
 
 namespace waInventario.Controllers
 {
     public class LocalController : Controller
     {
+        private LocalDAO localDao = new LocalDAO();
+
         // GET: Local
         public ActionResult Index()
         {
-            return View();
+            return View(localDao.RetornarTodos());
         }
 
         // GET: Local/Details/5
@@ -30,13 +35,16 @@ namespace waInventario.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
+                LocalAdicionarViewModel local = new LocalAdicionarViewModel();
+                TryUpdateModelAsync(local);
+                localDao.Inserir(local);
+                TempData["success"] = "Local adicionado com sucesso!";
+                return RedirectToAction("Index");
             }
-            catch
+            catch(Exception e)
             {
-                return View();
+                TempData["error"] = "Erro ao adicionar novo local...";
+                return RedirectToAction("Index");
             }
         }
 
