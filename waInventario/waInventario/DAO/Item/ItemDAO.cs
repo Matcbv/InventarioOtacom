@@ -46,19 +46,19 @@ namespace waInventario.DAO.Item
             }
         }
 
-        public ItemViewModel RetornarPorId(long id)
+        public ItemViewModel RetornarPorId(int id)
         {
             using (var conexao = new SqlConnection(connStr))
             {
                 try
                 {
-                    ItemViewModel result = conexao.QueryFirst<ItemViewModel>("select * from Item where id=@id", new { Id = id });
+                    ItemViewModel result = conexao.QueryFirst<ItemViewModel>("select Item.* from Item where ID=@id", new { id = id });
                     conexao.Close();
                     return result;
                 }
-                catch (Exception e)
+                catch
                 {
-                    throw new Exception("Não foi possível buscar item pelo id!", e);
+                    throw new Exception();
                 }
             }
         }

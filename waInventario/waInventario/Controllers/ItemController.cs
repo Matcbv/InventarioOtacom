@@ -1,26 +1,34 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using waInventario.DAO.Item;
+using waInventario.Models.Item.Input;
+using waInventario.Models.Item.Query;
 
 namespace waInventario.Controllers
 {
     public class ItemController : Controller
     {
+        private ItemDAO itemDao = new ItemDAO();
+
         // GET: Item
         public ActionResult Index()
         {
-            return View();
+            return View(itemDao.RetornarTodos());
         }
 
         // GET: Item/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+
+            ItemViewModel item = new ItemViewModel();
+            return View(item);
         }
 
         // GET: Item/Create
         public ActionResult Create()
         {
-            return View();
+            ItemAdicionarViewModel item = new ItemAdicionarViewModel();
+            return View(item);
         }
 
         // POST: Item/Create
@@ -30,20 +38,24 @@ namespace waInventario.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-
+                ItemAdicionarViewModel item = new ItemAdicionarViewModel();
+                TryUpdateModelAsync(item);
+                itemDao.Inserir(item);
+                TempData["success"] = "Item adicionado com sucesso!";
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                TempData["error"] = "Erro ao adicionar novo item";
+                return RedirectToAction("Index");
             }
         }
 
         // GET: Item/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ItemAtualizarViewModel item = new ItemAtualizarViewModel();
+            return View(item);
         }
 
         // POST: Item/Edit/5
@@ -53,8 +65,9 @@ namespace waInventario.Controllers
         {
             try
             {
-                // TODO: Add update logic here
-
+                ItemAtualizarViewModel item = new ItemAtualizarViewModel();
+                TryUpdateModelAsync(item);
+                itemDao.Alterar(item);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -66,7 +79,8 @@ namespace waInventario.Controllers
         // GET: Item/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            ItemViewModel item = itemDao.RetornarPorId(id);
+            return View(item);
         }
 
         // POST: Item/Delete/5
@@ -76,8 +90,9 @@ namespace waInventario.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
-
+                ItemDeletarViewModel item = new ItemDeletarViewModel();
+                TryUpdateModelAsync(item);
+                itemDao.Deletar(item);
                 return RedirectToAction(nameof(Index));
             }
             catch

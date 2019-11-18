@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using waInventario.DAO.Local;
 using waInventario.Models.Local.Input;
+using waInventario.Models.Local.Query;
 
 namespace waInventario.Controllers
 {
@@ -19,13 +20,16 @@ namespace waInventario.Controllers
         // GET: Local/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+
+            LocalViewModel local = new LocalViewModel();
+            return View(local);
         }
 
         // GET: Local/Create
         public ActionResult Create()
         {
-            return View();
+            LocalAdicionarViewModel local = new LocalAdicionarViewModel();
+            return View(local);
         }
 
         // POST: Local/Create
@@ -51,7 +55,8 @@ namespace waInventario.Controllers
         // GET: Local/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            LocalAtualizarViewModel local = new LocalAtualizarViewModel();
+            return View(local);
         }
 
         // POST: Local/Edit/5
@@ -61,20 +66,22 @@ namespace waInventario.Controllers
         {
             try
             {
-                // TODO: Add update logic here
-
+                LocalAtualizarViewModel local = new LocalAtualizarViewModel();
+                TryUpdateModelAsync(local);
+                localDao.Alterar(local);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return RedirectToAction(nameof(Index));
             }
         }
 
         // GET: Local/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            LocalViewModel local = localDao.RetornarPeloId(id);
+            return View(local);
         }
 
         // POST: Local/Delete/5
@@ -84,8 +91,9 @@ namespace waInventario.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
-
+                LocalDeletarViewModel local = new LocalDeletarViewModel();
+                TryUpdateModelAsync(local);
+                localDao.Deletar(local);
                 return RedirectToAction(nameof(Index));
             }
             catch

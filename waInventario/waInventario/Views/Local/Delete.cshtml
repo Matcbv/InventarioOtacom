@@ -1,0 +1,41 @@
+﻿@model waInventario.Models.Local.Query.LocalViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar</h1>
+
+<h2>Quer mesmo deletar esse local?</h2>
+<div>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>           
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Descricao)
+                </td>
+            </tr>         
+        </tbody>
+    </table>
+
+    <form asp-action="Delete">
+        <input  type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

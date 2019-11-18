@@ -52,7 +52,7 @@ namespace waInventario.DAO.Local
             {
                 try
                 {
-                    LocalViewModel result = conexao.QueryFirst<LocalViewModel>("select Local.* from Local where ID=@id");
+                    LocalViewModel result = conexao.QueryFirst<LocalViewModel>("select Local.* from Local where ID=@id", new { id = id });
                     conexao.Close();
                     return result;
                 }

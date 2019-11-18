@@ -29,3 +29,11 @@ C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.
 C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\waInventario.csproj.CopyComplete
 C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Local\Index.g.cshtml.cs
 C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Local\Create.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Local\Edit.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Local\Delete.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Item\Index.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Item\Create.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Local\Details.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Item\Edit.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Item\Delete.g.cshtml.cs
+C:\Repositorio\InventarioOtacom\waInventario\waInventario\obj\Debug\netcoreapp2.1\Razor\Views\Item\Details.g.cshtml.cs
