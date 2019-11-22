@@ -1,6 +1,6 @@
 ﻿namespace waInventario.Models.Item.Query
 {
-    public class ItemViewModel
+    public class RetornarPorId
     {
         public long ID { get; set; }
         public long FKLocal { get; set; }

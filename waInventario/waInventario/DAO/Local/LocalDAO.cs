@@ -34,8 +34,8 @@ namespace waInventario.DAO.Local
                 {
                     IEnumerable<LocalViewModel> result = conexao.Query<LocalViewModel>(
                     "select Local.* from Local " +
-                    "where Item.Local like '%" + busca + "%' " +
-                    "order by Item.Local");
+                    "where Local.Descricao like '%" + busca + "%' " +
+                    "order by Local.Descricao");
                     conexao.Close();
                     return result;
                 }

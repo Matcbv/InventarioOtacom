@@ -7,24 +7,40 @@
 <h2>Details</h2>
 
 <div>
-    <h4>LocalViewModel</h4>
+
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ID)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ID)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-    </dl>
+  
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.ID)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Descricao)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = Model.ID })
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+    
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-default">Voltar à lista</a>
 </div>

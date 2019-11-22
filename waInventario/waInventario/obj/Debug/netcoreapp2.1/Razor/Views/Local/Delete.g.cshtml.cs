@@ -106,12 +106,12 @@ using waInventario.Models;
             WriteLiteral("\r\n                </td>\r\n            </tr>         \r\n        </tbody>\r\n    </table>\r\n\r\n    ");
             EndContext();
             BeginContext(841, 162, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af7b5183ea1847cf8453e1bf89dd3bae", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "25e0269545784dd6b4f0e4eda661b2ee", async() => {
                 BeginContext(867, 85, true);
                 WriteLiteral("\r\n        <input  type=\"submit\" value=\"Delete\" class=\"btn btn-default\" /> |\r\n        ");
                 EndContext();
                 BeginContext(952, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7cd1a33ab26471aa5db1f88d88a889f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5c7708a2b934e4789f3aa4b994cd2ba", async() => {
                     BeginContext(974, 12, true);
                     WriteLiteral("Back to List");
                     EndContext();

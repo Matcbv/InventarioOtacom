@@ -10,28 +10,29 @@ namespace waInventario.Controllers
     {
         private ItemDAO itemDao = new ItemDAO();
 
-        // GET: Item
         public ActionResult Index()
         {
             return View(itemDao.RetornarTodos());
         }
 
-        // GET: Item/Details/5
+        public ActionResult Buscar(){ 
+            
+            string pesquisa = HttpContext.Request.Form["pesquisa"];
+            return View("Index", itemDao.RetornarPorNome(pesquisa));
+        }
+
         public ActionResult Details(int id)
         {
-
-            ItemViewModel item = new ItemViewModel();
+            RetornarPorId item = itemDao.RetornarPorId(id);
             return View(item);
         }
 
-        // GET: Item/Create
         public ActionResult Create()
         {
             ItemAdicionarViewModel item = new ItemAdicionarViewModel();
             return View(item);
         }
 
-        // POST: Item/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -51,14 +52,13 @@ namespace waInventario.Controllers
             }
         }
 
-        // GET: Item/Edit/5
         public ActionResult Edit(int id)
         {
-            ItemAtualizarViewModel item = new ItemAtualizarViewModel();
+
+            RetornarPorId item = itemDao.RetornarPorId(id);
             return View(item);
         }
 
-        // POST: Item/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -72,18 +72,16 @@ namespace waInventario.Controllers
             }
             catch
             {
-                return View();
+                return RedirectToAction(nameof(Index));
             }
         }
 
-        // GET: Item/Delete/5
         public ActionResult Delete(int id)
         {
-            ItemViewModel item = itemDao.RetornarPorId(id);
+            RetornarPorId item = itemDao.RetornarPorId(id);
             return View(item);
         }
 
-        // POST: Item/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

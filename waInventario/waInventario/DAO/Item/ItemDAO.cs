@@ -9,13 +9,13 @@ namespace waInventario.DAO.Item
 {
     public class ItemDAO{
 
-        public IEnumerable<ItemViewModel> RetornarTodos()
+        public IEnumerable<RetornarPorId> RetornarTodos()
         {
             using (var conexao = new SqlConnection(connStr))
             {
                 try
                 {
-                    IEnumerable<ItemViewModel> result = conexao.Query<ItemViewModel>("select * from Item");
+                    IEnumerable<RetornarPorId> result = conexao.Query<RetornarPorId>("select * from Item");
                     conexao.Close();
                     return result;
                 }
@@ -26,13 +26,13 @@ namespace waInventario.DAO.Item
             }
         }
 
-        public IEnumerable<ItemViewModel> RetornarPorNome(string busca)
+        public IEnumerable<RetornarPorId> RetornarPorNome(string busca)
         {
             using (var conexao = new SqlConnection(connStr))
             {
                 try
                 {
-                    IEnumerable<ItemViewModel> result = conexao.Query<ItemViewModel>(
+                    IEnumerable<RetornarPorId> result = conexao.Query<RetornarPorId>(
                         "select Item.* from Item " +
                         "where Item.Nome like '%" + busca + "%' " +
                         "order by Item.Nome");
@@ -46,13 +46,13 @@ namespace waInventario.DAO.Item
             }
         }
 
-        public ItemViewModel RetornarPorId(int id)
+        public RetornarPorId RetornarPorId(int id)
         {
             using (var conexao = new SqlConnection(connStr))
             {
                 try
                 {
-                    ItemViewModel result = conexao.QueryFirst<ItemViewModel>("select Item.* from Item where ID=@id", new { id = id });
+                    RetornarPorId result = conexao.QueryFirst<RetornarPorId>("select Item.* from Item where ID=@id", new { id = id });
                     conexao.Close();
                     return result;
                 }

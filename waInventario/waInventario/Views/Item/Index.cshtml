@@ -1,12 +1,28 @@
-﻿@model IEnumerable<waInventario.Models.Item.Query.ItemViewModel>
+﻿@model IEnumerable<waInventario.Models.Item.Query.RetornarPorId>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<p>
-    <a asp-action="Create">Novo item</a>
-</p>
+<h1>Itens</h1>
+
+<hr>
+
+<div>
+    <form asp-action="Buscar">
+        <ul class="nav navbar-nav">
+            <li>
+                <input name="pesquisa" class="form-control" />
+            </li>
+            <li>
+                <button class="btn btn-default">Pesquisar</button>
+            </li>
+        </ul>
+    </form>
+    
+</div>
+
+<br><br>
 
 <table class="table">
 
@@ -24,50 +40,37 @@
             <th>
                 @Html.DisplayNameFor(model => model.Autor)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Edicao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ISBN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PathImagem)
-            </th>
             <th></th>
         </tr>
     </thead>
 
     <tbody>
-        @foreach (var item in Model) {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FKLocal)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Autor)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Edicao)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ISBN)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PathImagem)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                    </td>
-                </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FKLocal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Deletar", "Delete", new { id = item.ID })
+                </td>
+            </tr>
         }
 
     </tbody>
 </table>
+
+<p>
+    <a asp-action="Create" class="btn btn-default">Novo item</a>
+</p>

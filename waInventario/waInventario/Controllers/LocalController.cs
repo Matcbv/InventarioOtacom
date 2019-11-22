@@ -17,11 +17,16 @@ namespace waInventario.Controllers
             return View(localDao.RetornarTodos());
         }
 
+        public ActionResult Buscar()
+        {
+            string pesquisa = HttpContext.Request.Form["pesquisa"];
+            return View("Index", localDao.RetornarPorDescricao(pesquisa));
+        }
+
         // GET: Local/Details/5
         public ActionResult Details(int id)
         {
-
-            LocalViewModel local = new LocalViewModel();
+            LocalViewModel local = localDao.RetornarPeloId(id);
             return View(local);
         }
 
@@ -55,7 +60,7 @@ namespace waInventario.Controllers
         // GET: Local/Edit/5
         public ActionResult Edit(int id)
         {
-            LocalAtualizarViewModel local = new LocalAtualizarViewModel();
+            LocalViewModel local = localDao.RetornarPeloId(id);
             return View(local);
         }
 

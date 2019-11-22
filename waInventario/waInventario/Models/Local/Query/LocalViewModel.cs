@@ -7,6 +7,6 @@ namespace waInventario.Models.Local.Query
     {
         public long ID { get; set; }
         public string Descricao { get; set; }
-        public List<ItemViewModel> Itens { get; set; }
+        public List<RetornarPorId> Itens { get; set; }
     }
 }
