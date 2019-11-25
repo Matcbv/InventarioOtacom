@@ -57,7 +57,7 @@ using waInventario.Models;
             WriteLiteral("<h1 style=\"text-align: center; font-size: xx-large\">Inventário Otacom</h1>\r\n<hr style=\"border-bottom: solid\">\r\n");
             EndContext();
             BeginContext(111, 78, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ce8b97b866443e3bcbd3637e739caa9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a468db5afdb842b38104b0d8e37513f9", async() => {
                 BeginContext(180, 5, true);
                 WriteLiteral("Local");
                 EndContext();
@@ -82,7 +82,7 @@ using waInventario.Models;
             WriteLiteral("\r\n<br /><br />\r\n");
             EndContext();
             BeginContext(205, 76, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ee04d198c694f688639bfb9306fd69c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6eec499d85e54a3a8e69975f0f67a2f5", async() => {
                 BeginContext(273, 4, true);
                 WriteLiteral("Item");
                 EndContext();

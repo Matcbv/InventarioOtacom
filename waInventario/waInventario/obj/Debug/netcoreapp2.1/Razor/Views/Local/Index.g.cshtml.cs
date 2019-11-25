@@ -58,7 +58,7 @@ using waInventario.Models;
             WriteLiteral("\r\n<h1>Locais</h1>\r\n\r\n<hr>\r\n\r\n<div>\r\n    ");
             EndContext();
             BeginContext(108, 297, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4fe6b48432fd4f22b770abd35bafd3ef", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8a38610eb79495b9591cb9ccba3b86a", async() => {
                 BeginContext(134, 264, true);
                 WriteLiteral(@"
         <ul class=""nav navbar-nav"">
@@ -178,7 +178,7 @@ using waInventario.Models;
             WriteLiteral("    </tbody>\r\n</table>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(1386, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2624f96aa2764426821ed23614708f9e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "439a0f3c5480416ea45a21652a4c44b5", async() => {
                 BeginContext(1433, 10, true);
                 WriteLiteral("Novo local");
                 EndContext();

@@ -4,43 +4,28 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h1>Detalhes</h1>
+
+<hr />
 
 <div>
 
-    <hr />
-  
-    <table class="table">
+    <div class="row">
 
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.ID)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Descricao)
-                </th>
-            </tr>
-        </thead>
+        <div class="form-group">
+            <label asp-for="ID" class="control-label"></label>
+            <input asp-for="ID" class="form-control" readonly />
+        </div>
 
-        <tbody>
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.ID)
-                </td>
+        <div class="form-group">
+            <label asp-for="Descricao" class="control-label"></label>
+            <input asp-for="Descricao" class="form-control" readonly />
+        </div>
 
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.Descricao)
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = Model.ID })
-                </td>
-            </tr>
-        </tbody>
+    </div>
 
-    </table>
-    
 </div>
+
 <div>
     <a asp-action="Index" class="btn btn-default">Voltar à lista</a>
 </div>
