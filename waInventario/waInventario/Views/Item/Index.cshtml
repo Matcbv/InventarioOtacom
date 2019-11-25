@@ -1,28 +1,31 @@
 ﻿@model IEnumerable<waInventario.Models.Item.Query.RetornarPorId>
 
-@{
-    ViewData["Title"] = "Index";
-}
+<br />
 
 <h1>Itens</h1>
 
-<hr>
+<br />
 
 <div>
+
     <form asp-action="Buscar">
-        <ul class="nav navbar-nav">
-            <li>
-                <input name="pesquisa" class="form-control" />
-            </li>
-            <li>
-                <button class="btn btn-default">Pesquisar</button>
-            </li>
-        </ul>
+
+        <table class="table">
+            <tr>
+                <th>
+                    <input name="pesquisa" class="form-control" />
+                </th>
+                <th>
+                    <button class="btn btn-default">Pesquisar</button>
+                </th>
+            </tr>
+        </table>
+
     </form>
     
 </div>
 
-<br><br>
+<br>
 
 <table class="table">
 

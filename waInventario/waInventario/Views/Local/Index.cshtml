@@ -1,23 +1,30 @@
 ﻿@model IEnumerable<waInventario.Models.Local.Query.LocalViewModel>
 
+<br>
+
 <h1>Locais</h1>
 
-<hr>
+<br />
 
 <div>
     <form asp-action="Buscar">
-        <ul class="nav navbar-nav">
-            <li>
-                <input name="pesquisa" class="form-control" />
-            </li>
-            <li>
-                <button class="btn btn-default">Pesquisar</button>
-            </li>
-        </ul>
+
+        <table class="table">
+            <tr>
+                <th>
+                    <input name="pesquisa" class="form-control" />
+                </th>
+                <th>
+                    <button class="btn btn-default">Pesquisar</button>
+                </th>
+            </tr>
+        </table>
+
     </form>
+    
 </div>
 
-<br><br>
+<br>
 
 <table class="table">
     <thead>
