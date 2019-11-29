@@ -58,7 +58,7 @@ using waInventario.Models;
             WriteLiteral("\r\n<br />\r\n\r\n<h1>Itens</h1>\r\n\r\n<br />\r\n\r\n<div>\r\n\r\n    ");
             EndContext();
             BeginContext(119, 359, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15f00efebb8c4f219da0f5e15b0eab4f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9647447947654b099d9fa1893a498058", async() => {
                 BeginContext(145, 326, true);
                 WriteLiteral(@"
 
@@ -222,7 +222,7 @@ using waInventario.Models;
             WriteLiteral("\r\n    </tbody>\r\n</table>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(1864, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a3403aa526e40a3a8cb8fd6453a3916", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5d91b3662c54c7fbd88051e57ad9205", async() => {
                 BeginContext(1911, 9, true);
                 WriteLiteral("Novo item");
                 EndContext();
